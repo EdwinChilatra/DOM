@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <body>
-    
-    <div id="elemen">
-        <div id="elemen-content">
-            Elemento
-        </div>
-    </div>
-    <script>
-        let elemen = document.getElementById('elemen');
-        elemen = 3;
-        elemen.style.backgroundColor = 'Red';
-        window['elemen-content'].style.backgroundColor = 'green';
-    </script>
+    <ul class="clase1">
+        <li>La</li>
+        <li>Prueba</li>
+    </ul>
+    <ul class="clase1 clase2">
+        <li class="clase3">ha</li>
+        <li class="clase3 clase4">pasado</li>
+        <li class="clase3">con</li>
+        <li class="clase3 clase4">exito</li>
 
-    
-    
+
+    </ul>
+    <script>
+        // elem.querySelectorAll(css) // Devulve lo que se le ingrese en la clase
+        // elem.querySelector(css) --> elem.querySelector(css)[0]
+        let elements = document.querySelectorAll('ul:last-of-type > li:first-child');
+        for(let elem of elements) {
+            // alert(elem.innerHTML); // Prueba y Pasado
+        }
+        let elem = document.querySelector('ul:last-of-type > li');
+        // alert(elem.innerHTML);
+        let ago = document.getElementById('lo-que-quiero-seleccionar')
+        // alert(elem.innerHTML);
+    </script>
+    <script>
+        // elem.matches(css) --> comprueba: true _ false
+        for(let elem of document.body.children){
+            if (elem.matches('.clase2')){
+                alert(elem);
+            }
+        }
+        document.body.querySelectorAll('css');
+        document.body.getElementsByClassName('css');
+        document.body.getElementsByTagName ('div');
+        document.body.getElementsByName('name')
+    </script>
 </body>
 </html>
 
